@@ -1,0 +1,22 @@
+// Javascript program to convert a decimal number to binary number
+ 
+function decToBinary(n)
+{
+    let binaryNum = new Array(32);	//array
+ 
+    let i = 0;						//counter
+    while (n > 0) {
+        binaryNum[i] = n % 2;
+        n = Math.floor(n / 2);
+        i++;
+    }
+	
+    for (let j = i - 1; j >= 0; j--)
+        document.write(binaryNum[j]);
+}
+ 
+    let n = 17;
+    decToBinary(n);
+ 
+
+}
